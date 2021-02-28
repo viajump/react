@@ -1,15 +1,15 @@
 import "./App.css";
 import Counter from "./components/Counter";
-import Vote from "./components/Vote";
+import Votes from "./components/Vote";
 
 function App() {
-  const votes = ["John", "Bill", "Alex", "James"];
+  const staff = ["John Bond", "Roy John", "Albert Henry", "Anthony Ray"];
   return (
     <div className="App">
-      <Vote />
-      <div style={{margin: "30px"}}>
-        {votes.map((vote) => {
-          return <Counter name={vote} />;
+      <Votes />
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        {staff.map((staffdata) => {
+          return <Counter name={staffdata} />;
         })}
       </div>
     </div>

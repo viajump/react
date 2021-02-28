@@ -9,11 +9,11 @@ export const decrement = () => ({
   type: DECREMENT,
 });
 
-const countIntial = {
+const intialState = {
   count: 0,
 };
 
-const counterReducer = (state = countIntial, action) => {
+const counterReducer = (state = intialState, action) => {
   switch (action.type) {
     case INCREMENT:
       return { ...state, count: state.count + 1 };

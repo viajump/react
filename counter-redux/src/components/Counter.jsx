@@ -4,10 +4,10 @@ import { decrement, increment } from "../redux/ducks/counter";
 
 const Counter = (props) => {
   const { name } = props;
+  /* const count = useSelector(state => state.counter.count) */
+  const dispatch = useDispatch();
 
   const [count, setCount] = useState(0);
-  /* const count = useSelector((state) => state.counter.count); */
-  const dispatch = useDispatch();
 
   const handleIncrement = () => {
     dispatch(increment());
@@ -20,13 +20,19 @@ const Counter = (props) => {
   };
 
   return (
-    <div style={{backgroundColor: "grey"}}>
-      <h1>{name}</h1>
-      <h1>{count}</h1>
+    <div
+      style={{
+        backgroundColor: "grey",
+        margin: "10px",
+        width: "200px",
+        padding: "20px"
+      }}
+    >
+      <h3>{name}</h3>
+      <h5>Counter: {count} </h5>
       <button onClick={handleIncrement}>+</button>
       <button onClick={handleDecrement}>-</button>
     </div>
   );
 };
-
 export default Counter;
