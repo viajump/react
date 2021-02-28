@@ -3,7 +3,7 @@ import Counter from "./components/Counter";
 import Votes from "./components/Vote";
 
 function App() {
-  const staff = ["John Bond", "Roy John", "Albert Henry", "Anthony Ray"];
+  const staff = ["John Bond", "Roy Jones", "Albert Henry", "Anthony Ray"];
   return (
     <div className="App">
       <Votes />
